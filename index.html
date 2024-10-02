@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Crypto Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- Logo above the widget -->
+    <img src="/Dex-View/logos/dex-view.png" alt="Logo" class="logo" />
+
+    <div class="widget-container">
+      <div id="loading">Loading...</div>
+      <div id="crypto-icons">
+        <label>
+          <input
+            type="checkbox"
+            class="crypto-checkbox"
+            value="bitcoin"
+            checked
+          />
+          <img
+            src="https://cryptologos.cc/logos/bitcoin-btc-logo.png"
+            alt="Bitcoin"
+            class="crypto-icon"
+          />
+        </label>
+        <label>
+          <input type="checkbox" class="crypto-checkbox" value="ethereum" />
+          <img
+            src="https://cryptologos.cc/logos/ethereum-eth-logo.png"
+            alt="Ethereum"
+            class="crypto-icon"
+          />
+        </label>
+        <label>
+          <input type="checkbox" class="crypto-checkbox" value="litecoin" />
+          <img
+            src="https://cryptologos.cc/logos/litecoin-ltc-logo.png"
+            alt="Litecoin"
+            class="crypto-icon"
+          />
+        </label>
+        <label>
+          <input type="checkbox" class="crypto-checkbox" value="ripple" />
+          <img src="/dex-view/logos/xrp.png" alt="Ripple" class="crypto-icon" />
+        </label>
+        <label>
+          <input type="checkbox" class="crypto-checkbox" value="cardano" />
+          <img
+            src="https://cryptologos.cc/logos/cardano-ada-logo.png"
+            alt="Cardano"
+            class="crypto-icon"
+          />
+        </label>
+      </div>
+      <div id="crypto-data"></div>
+      <canvas id="crypto-chart"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e;
+  color: white;
+  display: flex;
+  flex-direction: column; /* Change to column for vertical layout */
+  justify-content: center; /* Center the widget horizontally */
+  align-items: center; /* Center the widget vertically */
+  height: 100vh; /* Full height of the viewport */
+  padding: 20px;
+  margin: 0; /* Remove default margin */
+}
+
+.logo {
+  max-width: 500px; /* Ensure it is responsive */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Space between logo and widget */
+  display: block; /* Center the image */
+}
+
+.widget-container {
+  background-color: #282828; /* Dark background for the widget */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  padding: 20px; /* Inner padding */
+  width: 90%; /* Responsive width */
+  max-width: 800px; /* Maximum width for larger screens */
+}
+
+h1 {
+  color: red;
+  text-align: center; /* Center the heading text */
+  margin: 20px 0;
+}
+
+#loading {
+  display: none;
+  color: white;
+  text-align: center; /* Center loading text */
+}
+
+#crypto-icons {
+  display: flex;
+  justify-content: center; /* Center icons horizontally */
+  flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
+  margin-bottom: 20px;
+}
+
+.crypto-checkbox {
+  display: none; /* Hide the checkbox */
+}
+
+.crypto-icon {
+  width: 60px; /* Set a fixed width for icons */
+  height: auto;
+  margin: 5px; /* Add some margin for spacing */
+  cursor: pointer;
+  transition: transform 0.2s; /* Add a hover effect */
+}
+
+.crypto-icon:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+.crypto-table {
+  width: 100%; /* Set table width to 100% of container */
+  border-collapse: collapse; /* Collapse borders for a cleaner look */
+  margin-bottom: 20px;
+  border-radius: 10px; /* Rounded corners for the table */
+  overflow: hidden; /* Prevent inner content from overflowing */
+}
+
+.crypto-table th,
+.crypto-table td {
+  padding: 10px;
+  text-align: center; /* Center-align text in table cells */
+  border: 1px solid #444;
+  font-size: 14px; /* Make font size smaller */
+}
+
+.crypto-table th {
+  background-color: #333;
+}
+
+#crypto-chart {
+  width: 100%; /* Set chart width to 100% of container */
+  height: 300px; /* Maintain a reasonable chart height */
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 600px) {
+  .logo {
+    max-width: 300px; /* Reduce logo size on mobile */
+  }
+
+  .crypto-icon {
+    width: 40px; /* Smaller icons on mobile */
+    margin: 5px; /* Adjust margin for better spacing */
+  }
+
+  .crypto-table th:nth-child(3), /* Market Cap */
+  .crypto-table th:nth-child(4) { /* 24h Volume */
+    display: none; /* Hide Market Cap and Volume columns on mobile */
+  }
+
+  .crypto-table td:nth-child(3), /* Market Cap */
+  .crypto-table td:nth-child(4) { /* 24h Volume */
+    display: none; /* Hide Market Cap and Volume columns on mobile */
+  }
+
+  .crypto-table th,
+  .crypto-table td {
+    font-size: 12px; /* Make font size smaller for mobile */
+    padding: 8px; /* Reduce padding */
+  }
+}
+
+/* Media Queries for Horizontal Mobile View */
+@media (min-width: 601px) and (max-width: 900px) {
+  .crypto-table th,
+  .crypto-table td {
+    font-size: 14px; /* Maintain font size for slightly larger screens */
+  }
+
+  .crypto-table th:nth-child(3), /* Market Cap */
+  .crypto-table th:nth-child(4) { /* 24h Volume */
+    display: table-cell; /* Show columns */
+  }
+
+  .crypto-table td:nth-child(3), /* Market Cap */
+  .crypto-table td:nth-child(4) { /* 24h Volume */
+    display: table-cell; /* Show columns */
+  }
+}
